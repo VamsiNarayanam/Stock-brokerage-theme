@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Dashboard — STACKLY</title>
+  <meta name="description" content="STACKLY client trading dashboard demo — portfolio, watchlist, orders, and holdings.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%230B1F3A' width='32' height='32' rx='6'/><text x='16' y='22' text-anchor='middle' fill='%2300C853' font-size='16' font-family='sans-serif' font-weight='700'>S</text></svg>">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dash-body" data-dash="client">
+  <div class="dash-overlay" aria-hidden="true"></div>
+  <div class="dash-layout">
+    <aside class="dash-sidebar" aria-label="Client navigation">
+      <div class="dash-sidebar-brand">
+        <a href="client-dashboard.html" class="logo"><img src="images/stackly-green.webp" alt="STACKLY" width="320" height="132"></a>
+        <button type="button" class="dash-close" aria-label="Close menu"><i class="ri-close-line"></i></button>
+      </div>
+      <div class="dash-user">
+        <strong data-user-name>Guest</strong>
+        <span data-user-email>—</span>
+      </div>
+      <nav class="dash-nav">
+        <p class="dash-nav-label">Workspace</p>
+        <a href="#overview" data-view="overview" class="active"><i class="ri-dashboard-line"></i> Overview</a>
+        <a href="#markets" data-view="markets"><i class="ri-line-chart-line"></i> Markets</a>
+        <a href="#orders" data-view="orders"><i class="ri-shopping-cart-line"></i> Orders</a>
+        <a href="#holdings" data-view="holdings"><i class="ri-briefcase-line"></i> Holdings</a>
+        <a href="#mutual-funds" data-view="mutual-funds"><i class="ri-funds-box-line"></i> Mutual Funds</a>
+        <p class="dash-nav-label">Account</p>
+        <a href="#funds" data-view="funds"><i class="ri-bank-card-line"></i> Funds</a>
+        <a href="#reports" data-view="reports"><i class="ri-file-list-3-line"></i> Reports</a>
+        <a href="#settings" data-view="settings"><i class="ri-settings-3-line"></i> Settings</a>
+        <a href="login.html" data-logout><i class="ri-logout-box-r-line"></i> Sign out</a>
+      </nav>
+    </aside>
+
+    <div class="dash-main">
+      <header class="dash-topbar">
+        <div style="display:flex;align-items:center;gap:.65rem;min-width:0">
+          <button type="button" class="dash-menu-btn" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+          <h1 class="dash-topbar-title" data-view-title>Overview</h1>
+        </div>
+        <div class="dash-topbar-actions">
+          <img class="dash-avatar" src="images/photo-1507003211169-0a1dd7228f2d-w120-h120.webp" alt="Client profile" width="44" height="44">
+        </div>
+      </header>
+
+      <div class="dash-content">
+        <section class="dash-view is-active" data-view-panel="overview" aria-label="Overview">
+          <div class="stat-row">
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+              <p class="label">Portfolio value</p>
+              <p class="value">₹9,84,250</p>
+              <p class="delta up">+₹12,480 today</p>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+              <p class="label">Day’s P&amp;L</p>
+              <p class="value">+1.28%</p>
+              <p class="delta up">Above benchmark</p>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+              <p class="label">Available cash</p>
+              <p class="value">₹1,42,300</p>
+              <p class="delta">Ready to deploy</p>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+              <p class="label">Open orders</p>
+              <p class="value">3</p>
+              <p class="delta">2 pending · 1 partial</p>
+            </div>
+          </div>
+
+          <div class="dash-grid two-col">
+            <div class="dash-panel" data-aos="fade-up">
+              <div class="dash-panel-head">
+                <h3>Equity curve</h3>
+                <span class="text-muted" style="font-size:.8rem">YTD</span>
+              </div>
+              <div class="chart-wrap">
+                <canvas id="equityChart" aria-label="Portfolio equity chart"></canvas>
+              </div>
+            </div>
+            <div class="dash-panel" data-aos="fade-up" data-aos-delay="100">
+              <div class="dash-panel-head">
+                <h3>Watchlist</h3>
+                <button type="button" class="btn btn-ghost btn-sm" data-view="markets">Open markets</button>
+              </div>
+              <div class="watchlist-item">
+                <div><strong>RELIANCE</strong><span>NSE</span></div>
+                <div style="text-align:right"><strong>₹2,948.20</strong><span class="up" style="display:block;font-size:.8rem">+0.84%</span></div>
+              </div>
+              <div class="watchlist-item">
+                <div><strong>TCS</strong><span>NSE</span></div>
+                <div style="text-align:right"><strong>₹3,812.55</strong><span class="down" style="display:block;font-size:.8rem;color:var(--danger)">-0.32%</span></div>
+              </div>
+              <div class="watchlist-item">
+                <div><strong>HDFCBANK</strong><span>NSE</span></div>
+                <div style="text-align:right"><strong>₹1,672.40</strong><span class="up" style="display:block;font-size:.8rem;color:var(--green-dark)">+0.51%</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-view" data-view-panel="markets" hidden aria-label="Markets">
+          <div class="dash-panel">
+            <div class="dash-panel-head">
+              <h3>Live watchlist</h3>
+              <span class="text-muted" style="font-size:.8rem">NSE · cash</span>
+            </div>
+            <div class="watchlist-item">
+              <div><strong>RELIANCE</strong><span>NSE</span></div>
+              <div style="text-align:right"><strong>₹2,948.20</strong><span class="up" style="display:block;font-size:.8rem">+0.84%</span></div>
+            </div>
+            <div class="watchlist-item">
+              <div><strong>TCS</strong><span>NSE</span></div>
+              <div style="text-align:right"><strong>₹3,812.55</strong><span class="down" style="display:block;font-size:.8rem;color:var(--danger)">-0.32%</span></div>
+            </div>
+            <div class="watchlist-item">
+              <div><strong>HDFCBANK</strong><span>NSE</span></div>
+              <div style="text-align:right"><strong>₹1,672.40</strong><span class="up" style="display:block;font-size:.8rem;color:var(--green-dark)">+0.51%</span></div>
+            </div>
+            <div class="watchlist-item">
+              <div><strong>INFY</strong><span>NSE</span></div>
+              <div style="text-align:right"><strong>₹1,845.10</strong><span class="up" style="display:block;font-size:.8rem;color:var(--green-dark)">+1.02%</span></div>
+            </div>
+            <div class="watchlist-item">
+              <div><strong>NIFTY 50</strong><span>Index</span></div>
+              <div style="text-align:right"><strong>24,350.40</strong><span class="up" style="display:block;font-size:.8rem;color:var(--green-dark)">+0.62%</span></div>
+            </div>
+            <div class="watchlist-item">
+              <div><strong>BANKNIFTY</strong><span>Index</span></div>
+              <div style="text-align:right"><strong>51,820.15</strong><span class="up" style="display:block;font-size:.8rem;color:var(--green-dark)">+0.41%</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-view" data-view-panel="orders" hidden aria-label="Orders">
+          <div class="dash-panel">
+            <div class="dash-panel-head">
+              <h3>Open orders</h3>
+            </div>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Symbol</th>
+                    <th>Side</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>SBIN</td>
+                    <td>BUY</td>
+                    <td>100</td>
+                    <td>₹812.00</td>
+                    <td><span class="badge badge-warning">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td>ITC</td>
+                    <td>SELL</td>
+                    <td>200</td>
+                    <td>₹478.50</td>
+                    <td><span class="badge badge-info">Partial</span></td>
+                  </tr>
+                  <tr>
+                    <td>AXISBANK</td>
+                    <td>BUY</td>
+                    <td>50</td>
+                    <td>₹1,124.00</td>
+                    <td><span class="badge badge-warning">Pending</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-view" data-view-panel="holdings" hidden aria-label="Holdings">
+          <div class="dash-panel">
+            <div class="dash-panel-head">
+              <h3>Holdings</h3>
+            </div>
+            <div class="holdings-desktop table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Symbol</th>
+                    <th>Qty</th>
+                    <th>Avg</th>
+                    <th>LTP</th>
+                    <th>P&amp;L</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>RELIANCE</td>
+                    <td>40</td>
+                    <td>2,710</td>
+                    <td>2,948</td>
+                    <td class="up">+₹9,528</td>
+                  </tr>
+                  <tr>
+                    <td>TCS</td>
+                    <td>25</td>
+                    <td>3,640</td>
+                    <td>3,812</td>
+                    <td class="up">+₹4,300</td>
+                  </tr>
+                  <tr>
+                    <td>HDFCBANK</td>
+                    <td>60</td>
+                    <td>1,590</td>
+                    <td>1,672</td>
+                    <td class="up">+₹4,920</td>
+                  </tr>
+                  <tr>
+                    <td>TATAMOTORS</td>
+                    <td>80</td>
+                    <td>980</td>
+                    <td>942</td>
+                    <td class="down">-₹3,040</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="holdings-mobile">
+              <div class="holding-card">
+                <div class="holding-card-top"><strong>RELIANCE</strong><span class="up">+₹9,528</span></div>
+                <div class="holding-card-meta"><span>Qty 40</span><span>Avg ₹2,710</span><span>LTP ₹2,948</span></div>
+              </div>
+              <div class="holding-card">
+                <div class="holding-card-top"><strong>TCS</strong><span class="up">+₹4,300</span></div>
+                <div class="holding-card-meta"><span>Qty 25</span><span>Avg ₹3,640</span><span>LTP ₹3,812</span></div>
+              </div>
+              <div class="holding-card">
+                <div class="holding-card-top"><strong>HDFCBANK</strong><span class="up">+₹4,920</span></div>
+                <div class="holding-card-meta"><span>Qty 60</span><span>Avg ₹1,590</span><span>LTP ₹1,672</span></div>
+              </div>
+              <div class="holding-card">
+                <div class="holding-card-top"><strong>TATAMOTORS</strong><span class="down" style="color:var(--danger)">-₹3,040</span></div>
+                <div class="holding-card-meta"><span>Qty 80</span><span>Avg ₹980</span><span>LTP ₹942</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-view" data-view-panel="mutual-funds" hidden aria-label="Mutual Funds">
+          <div class="dash-panel">
+            <div class="dash-panel-head">
+              <h3>Active SIPs</h3>
+            </div>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Scheme</th>
+                    <th>SIP</th>
+                    <th>Next debit</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Parag Parikh Flexi Cap</td>
+                    <td>₹5,000</td>
+                    <td>12 Nov</td>
+                    <td><span class="badge badge-success">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>Nifty 50 Index Fund</td>
+                    <td>₹3,000</td>
+                    <td>15 Nov</td>
+                    <td><span class="badge badge-success">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>UTI Nifty Next 50</td>
+                    <td>₹2,000</td>
+                    <td>18 Nov</td>
+                    <td><span class="badge badge-info">Paused</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-view" data-view-panel="funds" hidden aria-label="Funds">
+          <div class="stat-row">
+            <div class="stat-card">
+              <p class="label">Available cash</p>
+              <p class="value">₹1,42,300</p>
+              <p class="delta">UPI · NEFT ready</p>
+            </div>
+            <div class="stat-card">
+              <p class="label">Margin used</p>
+              <p class="value">₹38,450</p>
+              <p class="delta">Intraday</p>
+            </div>
+            <div class="stat-card">
+              <p class="label">Withdrawals pending</p>
+              <p class="value">₹0</p>
+              <p class="delta">Nothing in queue</p>
+            </div>
+          </div>
+          <div class="dash-panel" style="margin-top:1.25rem">
+            <div class="dash-panel-head">
+              <h3>Bank on file</h3>
+            </div>
+            <p class="text-muted" style="margin:0;line-height:1.55">HDFC Bank · ****4521 · Primary. Add funds before 3 PM IST for same-day credit.</p>
+          </div>
+        </section>
+
+        <section class="dash-view" data-view-panel="reports" hidden aria-label="Reports">
+          <div class="dash-panel">
+            <div class="dash-panel-head">
+              <h3>Download centre</h3>
+            </div>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Report</th>
+                    <th>Period</th>
+                    <th>Format</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Contract notes</td>
+                    <td>Oct 2026</td>
+                    <td>PDF</td>
+                  </tr>
+                  <tr>
+                    <td>Tax P&amp;L</td>
+                    <td>FY 2025–26</td>
+                    <td>Excel</td>
+                  </tr>
+                  <tr>
+                    <td>Holdings statement</td>
+                    <td>As of today</td>
+                    <td>PDF</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-view" data-view-panel="settings" hidden aria-label="Settings">
+          <div class="dash-panel">
+            <div class="dash-panel-head">
+              <h3>Profile</h3>
+            </div>
+            <p style="margin:0 0 .75rem"><strong data-user-name>Guest</strong></p>
+            <p class="text-muted" style="margin:0 0 1rem" data-user-email>—</p>
+            <p class="text-muted" style="margin:0;line-height:1.55">Password, bank mandate, and segment activation stay behind KYC. This demo keeps settings read-only.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

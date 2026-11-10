@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — STACKLY</title>
+  <meta name="description" content="STACKLY admin panel demo — users, KYC, deposits, trade volume, and support.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%230B1F3A' width='32' height='32' rx='6'/><text x='16' y='22' text-anchor='middle' fill='%2300C853' font-size='16' font-family='sans-serif' font-weight='700'>S</text></svg>">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dash-body" data-dash="admin">
+  <div class="dash-overlay" aria-hidden="true"></div>
+  <div class="dash-layout">
+    <aside class="dash-sidebar" aria-label="Admin navigation">
+      <div class="dash-sidebar-brand">
+        <a href="admin-dashboard.html" class="logo"><img src="images/stackly-green.webp" alt="STACKLY" width="320" height="132"></a>
+        <button type="button" class="dash-close" aria-label="Close menu"><i class="ri-close-line"></i></button>
+      </div>
+      <div class="dash-user">
+        <strong data-user-name>Guest</strong>
+        <span data-user-email>—</span>
+      </div>
+      <nav class="dash-nav">
+        <p class="dash-nav-label">Admin</p>
+        <a href="#overview" data-view="overview" class="active"><i class="ri-dashboard-3-line"></i> Overview</a>
+        <a href="#users" data-view="users"><i class="ri-user-line"></i> Users</a>
+        <a href="#kyc" data-view="kyc"><i class="ri-shield-user-line"></i> KYC queue</a>
+        <a href="#deposits" data-view="deposits"><i class="ri-exchange-dollar-line"></i> Deposits / Withdrawals</a>
+        <a href="#volume" data-view="volume"><i class="ri-bar-chart-box-line"></i> Trade volume</a>
+        <a href="#support" data-view="support"><i class="ri-customer-service-2-line"></i> Support tickets</a>
+        <a href="#cms" data-view="cms"><i class="ri-article-line"></i> CMS posts</a>
+        <p class="dash-nav-label">System</p>
+        <a href="#settings" data-view="settings"><i class="ri-settings-4-line"></i> Settings</a>
+        <a href="login.html" data-logout><i class="ri-logout-box-r-line"></i> Sign out</a>
+      </nav>
+    </aside>
+
+    <div class="dash-main">
+      <header class="dash-topbar">
+        <div style="display:flex;align-items:center;gap:.65rem;min-width:0">
+          <button type="button" class="dash-menu-btn" aria-label="Open menu"><i class="ri-menu-line"></i></button>
+          <h1 class="dash-topbar-title" data-view-title>Admin overview</h1>
+        </div>
+        <div class="dash-topbar-actions">
+          <img class="dash-avatar" src="images/photo-1560250097-0b93528c311a-w120-h120.webp" alt="Admin profile" width="44" height="44">
+        </div>
+      </header>
+
+      <div class="dash-content">
+        <section class="dash-view is-active" data-view-panel="overview" aria-label="Overview">
+          <div class="stat-row">
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+              <p class="label">Total users</p>
+              <p class="value">15,942</p>
+              <p class="delta up">+218 this week</p>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+              <p class="label">KYC pending</p>
+              <p class="value">962</p>
+              <p class="delta down">Needs review</p>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+              <p class="label">Net deposits (7d)</p>
+              <p class="value">₹48.2 Cr</p>
+              <p class="delta up">+6.4% WoW</p>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+              <p class="label">Open tickets</p>
+              <p class="value">37</p>
+              <p class="delta">12 high priority</p>
+            </div>
+          </div>
+
+          <div class="dash-grid two-col">
+            <div class="dash-panel" data-aos="fade-up">
+              <div class="dash-panel-head">
+                <h3>Trade volume (₹ Cr)</h3>
+                <span class="text-muted" style="font-size:.8rem">Last 7 days</span>
+              </div>
+              <div class="chart-wrap">
+                <canvas id="volumeChart" aria-label="Trade volume chart"></canvas>
+              </div>
+            </div>
+            <div class="dash-panel" data-aos="fade-up" data-aos-delay="100">
+              <div class="dash-panel-head">
+                <h3>User status mix</h3>
+              </div>
+              <div class="chart-wrap">
+                <canvas id="usersChart" aria-label="User status doughnut chart"></canvas>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-view" data-view-panel="users" hidden aria-label="Users">
+          <div class="dash-panel">
+            <div class="dash-panel-head">
+              <h3>Recent users</h3>
+            </div>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Plan</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Neha Kapoor</td>
+                    <td>neha@example.com</td>
+                    <td>Pro</td>
+                    <td><span class="badge badge-success">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>Ravi Deshmukh</td>
+                    <td>ravi@example.com</td>
+                    <td>Basic</td>
+                    <td><span class="badge badge-warning">KYC</span></td>
+                  </tr>
+                  <tr>
+                    <td>Sara Fernandes</td>
+                    <td>sara@example.com</td>
+                    <td>Elite</td>
+                    <td><span class="badge badge-success">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td>Orbit Advisors LLP</td>
+                    <td>ops@orbit.example</td>
+                    <td>Elite</td>
+                    <td><span class="badge badge-info">Review</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-view" data-view-panel="kyc" hidden aria-label="KYC queue">
+          <div class="dash-panel">
+            <div class="dash-panel-head">
+              <h3>KYC queue</h3>
+            </div>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Client</th>
+                    <th>Submitted</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Neha Kapoor</td>
+                    <td>Today 09:12</td>
+                    <td>Individual</td>
+                    <td><span class="badge badge-warning">Review</span></td>
+                  </tr>
+                  <tr>
+                    <td>Ravi Deshmukh</td>
+                    <td>Today 08:40</td>
+                    <td>Individual</td>
+                    <td><span class="badge badge-warning">Review</span></td>
+                  </tr>
+                  <tr>
+                    <td>Orbit Advisors LLP</td>
+                    <td>Yesterday</td>
+                    <td>Non-individual</td>
+                    <td><span class="badge badge-danger">Docs needed</span></td>
+                  </tr>
+                  <tr>
+                    <td>Sara Fernandes</td>
+                    <td>Yesterday</td>
+                    <td>Individual</td>
+                    <td><span class="badge badge-success">Approved</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-view" data-view-panel="deposits" hidden aria-label="Deposits and withdrawals">
+          <div class="dash-panel">
+            <div class="dash-panel-head">
+              <h3>Deposits / Withdrawals</h3>
+            </div>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Client</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Deposit</td>
+                    <td>A. Mehta</td>
+                    <td>₹1,50,000</td>
+                    <td><span class="badge badge-success">Cleared</span></td>
+                  </tr>
+                  <tr>
+                    <td>Withdrawal</td>
+                    <td>P. Nair</td>
+                    <td>₹2,40,000</td>
+                    <td><span class="badge badge-warning">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td>Deposit</td>
+                    <td>D. Okonkwo</td>
+                    <td>₹75,000</td>
+                    <td><span class="badge badge-info">Bank hold</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-view" data-view-panel="volume" hidden aria-label="Trade volume">
+          <div class="dash-panel">
+            <div class="dash-panel-head">
+              <h3>Trade volume (₹ Cr)</h3>
+              <span class="text-muted" style="font-size:.8rem">Last 7 days</span>
+            </div>
+            <div class="chart-wrap">
+              <canvas id="volumeChartAlt" aria-label="Trade volume detail chart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-view" data-view-panel="support" hidden aria-label="Support tickets">
+          <div class="dash-panel">
+            <div class="dash-panel-head">
+              <h3>Support tickets</h3>
+            </div>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Subject</th>
+                    <th>Client</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>#4821</td>
+                    <td>Margin blocked after square-off</td>
+                    <td>A. Mehta</td>
+                    <td><span class="badge badge-danger">High</span></td>
+                    <td>In progress</td>
+                  </tr>
+                  <tr>
+                    <td>#4818</td>
+                    <td>SIP mandate failed</td>
+                    <td>P. Nair</td>
+                    <td><span class="badge badge-warning">Med</span></td>
+                    <td>Waiting client</td>
+                  </tr>
+                  <tr>
+                    <td>#4812</td>
+                    <td>Tax P&amp;L export format</td>
+                    <td>D. Okonkwo</td>
+                    <td><span class="badge badge-info">Low</span></td>
+                    <td>Queued</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-view" data-view-panel="cms" hidden aria-label="CMS posts">
+          <div class="dash-panel">
+            <div class="dash-panel-head">
+              <h3>CMS posts</h3>
+            </div>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Desk</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Before the open · 7 Nov</td>
+                    <td>Markets</td>
+                    <td><span class="badge badge-success">Published</span></td>
+                  </tr>
+                  <tr>
+                    <td>SIP checklist for new accounts</td>
+                    <td>Education</td>
+                    <td><span class="badge badge-warning">Draft</span></td>
+                  </tr>
+                  <tr>
+                    <td>Exchange holiday calendar</td>
+                    <td>Company</td>
+                    <td><span class="badge badge-success">Published</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-view" data-view-panel="settings" hidden aria-label="Settings">
+          <div class="dash-panel">
+            <div class="dash-panel-head">
+              <h3>Admin profile</h3>
+            </div>
+            <p style="margin:0 0 .75rem"><strong data-user-name>Guest</strong></p>
+            <p class="text-muted" style="margin:0 0 1rem" data-user-email>—</p>
+            <p class="text-muted" style="margin:0;line-height:1.55">Role, desk access, and audit trails stay on the live Stackly console. This demo keeps settings read-only.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

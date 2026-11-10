@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STACKLY — Trade Smarter. Grow Faster.</title>
+  <meta name="description" content="STACKLY is a premium online stock brokerage platform for equities, F&O, mutual funds, and portfolio advisory. Trade smarter. Grow faster.">
+  <meta property="og:title" content="STACKLY — Trade Smarter. Grow Faster.">
+  <meta property="og:description" content="Institutional-grade brokerage tools for modern investors.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%230B1F3A' width='32' height='32' rx='6'/><text x='16' y='22' text-anchor='middle' fill='%2300C853' font-size='16' font-family='sans-serif' font-weight='700'>S</text></svg>">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="is-preload">
+  <div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Loading Stackly">
+    <div class="preloader-glow" aria-hidden="true"></div>
+    <div class="preloader-inner">
+      <div class="preloader-mark" aria-hidden="true">
+        <span class="preloader-ring"></span>
+        <span class="preloader-ring preloader-ring--delay"></span>
+        <strong>S</strong>
+      </div>
+      <p class="preloader-brand">STACK<span>LY</span></p>
+      <p class="preloader-status">Opening your markets</p>
+      <div class="preloader-bar" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><img src="images/stackly-green.webp" alt="STACKLY" width="320" height="132"></a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><i class="ri-menu-line"></i></button>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div class="nav-mobile-actions">
+          <a href="login.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.35)">Login</a>
+          <a href="signup.html" class="btn btn-primary">Signup</a>
+        </div>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="btn-login">Login</a>
+        <a href="signup.html" class="btn btn-primary">Signup</a>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <main>
+    <!-- Hero: brand-first, centered full-bleed -->
+    <section class="hero hero--center">
+      <div class="hero-bg">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src="images/stock-hero-video.mp4" type="video/mp4">
+        </video>
+      
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <p class="hero-brand" data-aos="fade-up">STACK<span>LY</span></p>
+        <span class="hero-rule" aria-hidden="true" data-aos="fade-up" data-aos-delay="80"></span>
+        <h1 class="hero-headline" data-aos="fade-up" data-aos-delay="120">Trade Smarter. Grow Faster.</h1>
+        <p class="hero-support" data-aos="fade-up" data-aos-delay="180">Institutional-grade brokerage for equities, derivatives, and wealth — built for investors who demand clarity and control.</p>
+        <div class="cta-group" data-aos="fade-up" data-aos-delay="260">
+          <a href="404.html" class="btn btn-primary">Signup</a>
+          <a href="404.html" class="btn btn-secondary">Explore Markets</a>
+        </div>
+      </div>
+      <a href="#why-title" class="hero-scroll" aria-label="Scroll to Why Stackly">
+        <span>Scroll</span>
+        <i class="ri-arrow-down-line"></i>
+      </a>
+    </section>
+
+    <!-- Trust strip -->
+    <div class="trust-strip">
+      <div class="container trust-inner">
+        <p class="trust-label">Trusted across regulated markets</p>
+        <div class="trust-logos">
+          <span class="trust-logo">NSE</span>
+          <span class="trust-logo">BSE</span>
+          <span class="trust-logo">SEBI</span>
+          <span class="trust-logo">NSDL</span>
+          <span class="trust-logo">CDSL</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Stackly — image autoslide + deeper content -->
+    <section class="why-slide" aria-labelledby="why-title">
+      <div class="container">
+        <div class="why-slide-head" data-aos="fade-up">
+          <div>
+            <p class="why-slide-kicker">Why Stackly</p>
+            <h2 id="why-title" class="why-slide-title">Built for serious market participants</h2>
+            <p class="why-slide-lead">Low latency execution, transparent pricing, and research that informs — not overwhelms. Stackly is designed for traders who measure process, not just P&amp;L screenshots.</p>
+          </div>
+          <div class="why-slide-controls">
+            <button type="button" class="why-nav why-prev" aria-label="Previous reason"><i class="ri-arrow-left-line"></i></button>
+            <button type="button" class="why-nav why-next" aria-label="Next reason"><i class="ri-arrow-right-line"></i></button>
+          </div>
+        </div>
+
+        <div class="swiper why-swiper" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide why-card">
+              <div class="why-card-media">
+                <img src="images/photo-1535320903710-d993d3d77d29-w1400.webp" alt="Trading screens showing live market execution" width="1400" height="900" loading="lazy">
+              </div>
+              <div class="why-card-body">
+                <span class="why-card-num">01</span>
+                <i class="ri-flashlight-line"></i>
+                <h3>Execution you can trust</h3>
+                <p>Direct market access with smart order routing across NSE and BSE for precise fills when timing matters. Bracket, cover, and iceberg styles help you scale in without broadcasting size.</p>
+                <ul class="why-points">
+                  <li>DMA-style routing with clear order statuses</li>
+                  <li>Intraday &amp; delivery in one ticket flow</li>
+                  <li>Latency-aware workspace for the open</li>
+                </ul>
+              </div>
+            </article>
+            <article class="swiper-slide why-card">
+              <div class="why-card-media">
+                <img src="images/photo-1563013544-824ae1b704d3-w1400.webp" alt="Laptop security and encryption concept for brokerage accounts" width="1400" height="900" loading="lazy">
+              </div>
+              <div class="why-card-body">
+                <span class="why-card-num">02</span>
+                <i class="ri-shield-check-line"></i>
+                <h3>Secure by design</h3>
+                <p>Bank-grade encryption, two-factor authentication, and segregated client funds with full audit trails. Security is treated as infrastructure — not a marketing checkbox.</p>
+                <ul class="why-points">
+                  <li>Segregated client funds &amp; daily recon</li>
+                  <li>2FA on login and sensitive actions</li>
+                  <li>Role-based ops access with logging</li>
+                </ul>
+              </div>
+            </article>
+            <article class="swiper-slide why-card">
+              <div class="why-card-media">
+                <img src="images/photo-1432888498266-38ffec3eaf0a-w1400.webp" alt="Analyst working with research charts on multiple monitors" width="1400" height="900" loading="lazy">
+              </div>
+              <div class="why-card-body">
+                <span class="why-card-num">03</span>
+                <i class="ri-line-chart-line"></i>
+                <h3>Research that moves with you</h3>
+                <p>Actionable insights, technical screens, and portfolio diagnostics curated by seasoned market analysts — written for practitioners who prepare before the open.</p>
+                <ul class="why-points">
+                  <li>Morning notes &amp; expiry frameworks</li>
+                  <li>Watchlist-ready technical screens</li>
+                  <li>Portfolio diagnostics, not noise</li>
+                </ul>
+              </div>
+            </article>
+            <article class="swiper-slide why-card">
+              <div class="why-card-media">
+                <img src="images/photo-1556745757-8d76bdb6984b-w1400.webp" alt="Transparent pricing discussion with client" width="1400" height="900" loading="lazy">
+              </div>
+              <div class="why-card-body">
+                <span class="why-card-num">04</span>
+                <i class="ri-price-tag-3-line"></i>
+                <h3>Pricing without surprises</h3>
+                <p>Flat, published brokerage with clear plan upgrades. Know what you pay on Basic, Pro, and Elite before you place the order — no buried platform surprises mid-session.</p>
+                <ul class="why-points">
+                  <li>₹0 Basic platform fee to start</li>
+                  <li>Pro &amp; Elite for active desks</li>
+                  <li>Charges shown before confirm</li>
+                </ul>
+              </div>
+            </article>
+            <article class="swiper-slide why-card">
+              <div class="why-card-media">
+                <img src="images/photo-1522071820081-009f0129c71c-w1400.webp" alt="Support team collaborating for client success" width="1400" height="900" loading="lazy">
+              </div>
+              <div class="why-card-body">
+                <span class="why-card-num">05</span>
+                <i class="ri-customer-service-2-line"></i>
+                <h3>Support that knows the book</h3>
+                <p>From onboarding clinics to Elite relationship managers, help is staffed by people who understand orders, margins, and settlement — not scripted chat loops.</p>
+                <ul class="why-points">
+                  <li>Market-hours desk coverage</li>
+                  <li>Guided KYC &amp; funding help</li>
+                  <li>Elite RM for complex books</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="why-pagination swiper-pagination" aria-label="Why Stackly pagination"></div>
+
+        <div class="why-proof" data-aos="fade-up">
+          <div class="why-proof-item">
+            <strong class="why-count" data-count="15" data-prefix="" data-suffix="k+" data-decimals="0">0k+</strong>
+            <span>Active client accounts</span>
+          </div>
+          <div class="why-proof-item">
+            <strong class="why-count" data-count="12" data-prefix="&lt;" data-suffix="ms" data-decimals="0">&lt;0ms</strong>
+            <span>Typical quote-to-ticket path</span>
+          </div>
+          <div class="why-proof-item">
+            <strong class="why-count" data-count-static="NSE · BSE">NSE · BSE</strong>
+            <span>Exchange connectivity</span>
+          </div>
+          <div class="why-proof-item">
+            <strong class="why-count" data-count="24" data-prefix="" data-suffix="×5" data-decimals="0">0×5</strong>
+            <span>Platform monitoring</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Markets — live board -->
+    <section class="markets-board" aria-labelledby="markets-title">
+      <div class="container">
+        <div class="markets-board-head" data-aos="fade-up">
+          <div>
+            <p class="markets-board-kicker">Markets</p>
+            <h2 id="markets-title" class="markets-board-title">Live market snapshot</h2>
+            <p class="markets-board-lead">Indicative demo quotes for ThemeForest preview — refresh as the session moves.</p>
+          </div>
+          <div class="markets-board-status">
+            <span class="markets-live"><i></i> Market open</span>
+            <span class="markets-session">NSE · 09:15–15:30 IST</span>
+          </div>
+        </div>
+
+        <div class="markets-grid" data-aos="fade-up">
+          <article class="market-chip">
+            <div class="market-chip-top">
+              <div>
+                <strong>NIFTY 50</strong>
+                <span>Index</span>
+              </div>
+              <span class="market-chip-change up">+0.62%</span>
+            </div>
+            <p class="market-chip-price" data-ticker-price="24350.40">24,350.40</p>
+            <svg class="market-spark" viewBox="0 0 120 36" preserveAspectRatio="none" aria-hidden="true"><path d="M0 28 L15 22 L30 24 L45 14 L60 18 L75 10 L90 12 L105 6 L120 8" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </article>
+          <article class="market-chip">
+            <div class="market-chip-top">
+              <div>
+                <strong>SENSEX</strong>
+                <span>Index</span>
+              </div>
+              <span class="market-chip-change up">+0.48%</span>
+            </div>
+            <p class="market-chip-price" data-ticker-price="80124.15">80,124.15</p>
+            <svg class="market-spark" viewBox="0 0 120 36" preserveAspectRatio="none" aria-hidden="true"><path d="M0 26 L15 24 L30 20 L45 16 L60 18 L75 12 L90 14 L105 9 L120 7" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </article>
+          <article class="market-chip">
+            <div class="market-chip-top">
+              <div>
+                <strong>BANK NIFTY</strong>
+                <span>Index</span>
+              </div>
+              <span class="market-chip-change down">-0.18%</span>
+            </div>
+            <p class="market-chip-price" data-ticker-price="51240.60">51,240.60</p>
+            <svg class="market-spark down" viewBox="0 0 120 36" preserveAspectRatio="none" aria-hidden="true"><path d="M0 8 L15 10 L30 12 L45 18 L60 16 L75 22 L90 24 L105 28 L120 30" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </article>
+          <article class="market-chip">
+            <div class="market-chip-top">
+              <div>
+                <strong>NASDAQ</strong>
+                <span>US</span>
+              </div>
+              <span class="market-chip-change down">-0.21%</span>
+            </div>
+            <p class="market-chip-price" data-ticker-price="18245.70">18,245.70</p>
+            <svg class="market-spark down" viewBox="0 0 120 36" preserveAspectRatio="none" aria-hidden="true"><path d="M0 10 L15 12 L30 9 L45 16 L60 20 L75 18 L90 24 L105 27 L120 29" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </article>
+          <article class="market-chip">
+            <div class="market-chip-top">
+              <div>
+                <strong>USD / INR</strong>
+                <span>FX</span>
+              </div>
+              <span class="market-chip-change up">+0.09%</span>
+            </div>
+            <p class="market-chip-price" data-ticker-price="83.42">83.42</p>
+            <svg class="market-spark" viewBox="0 0 120 36" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 L15 19 L30 21 L45 17 L60 16 L75 14 L90 15 L105 12 L120 11" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </article>
+          <article class="market-chip">
+            <div class="market-chip-top">
+              <div>
+                <strong>GOLD</strong>
+                <span>MCX</span>
+              </div>
+              <span class="market-chip-change up">+0.34%</span>
+            </div>
+            <p class="market-chip-price" data-ticker-price="72450.00">72,450.00</p>
+            <svg class="market-spark" viewBox="0 0 120 36" preserveAspectRatio="none" aria-hidden="true"><path d="M0 24 L15 22 L30 20 L45 21 L60 15 L75 13 L90 11 L105 10 L120 8" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </article>
+        </div>
+
+        <div class="ticker-wrap markets-ticker" data-aos="fade-up">
+          <div class="ticker-track">
+            <div class="ticker-item"><span class="ticker-pulse"></span><span class="ticker-symbol">RELIANCE</span><span class="ticker-price" data-ticker-price="2948.20">2,948.20</span><span class="ticker-change up">+0.84%</span></div>
+            <div class="ticker-item"><span class="ticker-pulse"></span><span class="ticker-symbol">TCS</span><span class="ticker-price" data-ticker-price="3812.55">3,812.55</span><span class="ticker-change down">-0.32%</span></div>
+            <div class="ticker-item"><span class="ticker-pulse"></span><span class="ticker-symbol">HDFCBANK</span><span class="ticker-price" data-ticker-price="1672.40">1,672.40</span><span class="ticker-change up">+0.51%</span></div>
+            <div class="ticker-item"><span class="ticker-pulse"></span><span class="ticker-symbol">INFY</span><span class="ticker-price" data-ticker-price="1845.10">1,845.10</span><span class="ticker-change up">+1.02%</span></div>
+            <div class="ticker-item"><span class="ticker-pulse"></span><span class="ticker-symbol">BTC/USD</span><span class="ticker-price" data-ticker-price="67240.00">67,240.00</span><span class="ticker-change up">+1.14%</span></div>
+            <div class="ticker-item"><span class="ticker-pulse"></span><span class="ticker-symbol">RELIANCE</span><span class="ticker-price" data-ticker-price="2948.20">2,948.20</span><span class="ticker-change up">+0.84%</span></div>
+            <div class="ticker-item"><span class="ticker-pulse"></span><span class="ticker-symbol">TCS</span><span class="ticker-price" data-ticker-price="3812.55">3,812.55</span><span class="ticker-change down">-0.32%</span></div>
+            <div class="ticker-item"><span class="ticker-pulse"></span><span class="ticker-symbol">HDFCBANK</span><span class="ticker-price" data-ticker-price="1672.40">1,672.40</span><span class="ticker-change up">+0.51%</span></div>
+            <div class="ticker-item"><span class="ticker-pulse"></span><span class="ticker-symbol">INFY</span><span class="ticker-price" data-ticker-price="1845.10">1,845.10</span><span class="ticker-change up">+1.02%</span></div>
+            <div class="ticker-item"><span class="ticker-pulse"></span><span class="ticker-symbol">BTC/USD</span><span class="ticker-price" data-ticker-price="67240.00">67,240.00</span><span class="ticker-change up">+1.14%</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services — image autoslide -->
+    <section class="services-slide" aria-labelledby="services-title">
+      <div class="container">
+        <div class="services-slide-head" data-aos="fade-up">
+          <div>
+            <p class="services-slide-kicker">Services</p>
+            <h2 id="services-title" class="services-slide-title">Everything you need to trade &amp; invest</h2>
+            <p class="services-slide-lead">From cash equities to wealth planning — one platform, one relationship.</p>
+          </div>
+          <div class="services-slide-actions">
+            <div class="services-slide-controls">
+              <button type="button" class="svc-nav svc-prev" aria-label="Previous service"><i class="ri-arrow-left-line"></i></button>
+              <button type="button" class="svc-nav svc-next" aria-label="Next service"><i class="ri-arrow-right-line"></i></button>
+            </div>
+            <a href="404.html" class="btn btn-outline">View all</a>
+          </div>
+        </div>
+
+        <div class="swiper services-swiper" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide svc-card">
+              <a href="404.html" class="svc-card-media">
+                <img src="images/photo-1590283603385-17ffb3a7f29f-w900.webp" alt="Equity trading charts on a monitor" width="900" height="600" loading="lazy">
+              </a>
+              <div class="svc-card-body">
+                <i class="ri-stock-line"></i>
+                <h3>Equity Trading</h3>
+                <p>Cash market delivery and intraday with advanced order types.</p>
+                <a href="404.html" class="link-more">Learn more <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </article>
+            <article class="swiper-slide svc-card">
+              <a href="404.html" class="svc-card-media">
+                <img src="images/photo-1642790106117-e829e14a795f-w900.webp" alt="Derivatives candlestick chart close-up" width="900" height="600" loading="lazy">
+              </a>
+              <div class="svc-card-body">
+                <i class="ri-exchange-funds-line"></i>
+                <h3>F&amp;O</h3>
+                <p>Futures and options with margin insights and risk controls.</p>
+                <a href="404.html" class="link-more">Learn more <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </article>
+            <article class="swiper-slide svc-card">
+              <a href="404.html" class="svc-card-media">
+                <img src="images/photo-1579532537598-459ecdaf39cc-w900.webp" alt="Investment growth representing mutual funds" width="900" height="600" loading="lazy">
+              </a>
+              <div class="svc-card-body">
+                <i class="ri-funds-line"></i>
+                <h3>Mutual Funds</h3>
+                <p>Direct plans, SIPs, and goal-based baskets in one place.</p>
+                <a href="404.html" class="link-more">Learn more <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </article>
+            <article class="swiper-slide svc-card">
+              <a href="404.html" class="svc-card-media">
+                <img src="images/photo-1526304640581-d334cdbbf45e-w900.webp" alt="Global markets concept for IPO access" width="900" height="600" loading="lazy">
+              </a>
+              <div class="svc-card-body">
+                <i class="ri-rocket-line"></i>
+                <h3>IPO &amp; Advisory</h3>
+                <p>Primary market access and portfolio guidance from experts.</p>
+                <a href="404.html" class="link-more">Learn more <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </article>
+            <article class="swiper-slide svc-card">
+              <a href="404.html" class="svc-card-media">
+                <img src="images/photo-1454165804606-c3d57bc86b40-w900.webp" alt="Research documents and market analysis" width="900" height="600" loading="lazy">
+              </a>
+              <div class="svc-card-body">
+                <i class="ri-file-chart-line"></i>
+                <h3>Research &amp; Insights</h3>
+                <p>Morning notes, technical screens, and earnings calendars from our desk.</p>
+                <a href="404.html" class="link-more">Learn more <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </article>
+            <article class="swiper-slide svc-card">
+              <a href="404.html" class="svc-card-media">
+                <img src="images/photo-1556761175-5973dc0f32e7-w900.webp" alt="Advisory meeting for wealth planning" width="900" height="600" loading="lazy">
+              </a>
+              <div class="svc-card-body">
+                <i class="ri-treasure-map-line"></i>
+                <h3>Wealth Planning</h3>
+                <p>Goal mapping and multi-asset allocation reviews with clear reporting.</p>
+                <a href="404.html" class="link-more">Learn more <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="services-pagination swiper-pagination" aria-label="Services pagination"></div>
+      </div>
+    </section>
+
+    <!-- Getting started — image timeline -->
+    <section class="onboard" aria-labelledby="start-title">
+      <div class="container">
+        <div class="onboard-head" data-aos="fade-up">
+          <div>
+            <p class="onboard-kicker">Getting started</p>
+            <h2 id="start-title" class="onboard-title">How Stackly works</h2>
+            <p class="onboard-lead">Four image-led steps from signup to your first live order.</p>
+          </div>
+          <a href="404.html" class="btn btn-primary">Signup <i class="ri-arrow-right-line"></i></a>
+        </div>
+
+        <div class="onboard-rail" data-aos="fade-up">
+          <article class="onboard-step">
+            <div class="onboard-media">
+              <img src="images/photo-1556761175-4b46a572b786-w900.webp" alt="Person signing up on a laptop" width="900" height="700" loading="lazy">
+              <span class="onboard-badge">01</span>
+            </div>
+            <div class="onboard-copy">
+              <i class="ri-user-add-line"></i>
+              <h3>Create your account</h3>
+              <p>Sign up with email and mobile. Paperless onboarding starts instantly.</p>
+            </div>
+          </article>
+          <article class="onboard-step">
+            <div class="onboard-media">
+              <img src="images/photo-1450101499163-c8848c66ca85-w900.webp" alt="Identity verification documents on a desk" width="900" height="700" loading="lazy">
+              <span class="onboard-badge">02</span>
+            </div>
+            <div class="onboard-copy">
+              <i class="ri-shield-check-line"></i>
+              <h3>Complete KYC</h3>
+              <p>Aadhaar eSign and bank verification keep compliance friction-free.</p>
+            </div>
+          </article>
+          <article class="onboard-step">
+            <div class="onboard-media">
+              <img src="images/photo-1556742049-0cfed4f6a45d-w900.webp" alt="Mobile payment and funding a trading wallet" width="900" height="700" loading="lazy">
+              <span class="onboard-badge">03</span>
+            </div>
+            <div class="onboard-copy">
+              <i class="ri-wallet-3-line"></i>
+              <h3>Fund your wallet</h3>
+              <p>UPI, net banking, or NEFT — deposits reflect in near real time.</p>
+            </div>
+          </article>
+          <article class="onboard-step">
+            <div class="onboard-media">
+              <img src="images/photo-1516321318423-f06f85e504b3-w900.webp" alt="Trader reviewing live markets on a laptop" width="900" height="700" loading="lazy">
+              <span class="onboard-badge">04</span>
+            </div>
+            <div class="onboard-copy">
+              <i class="ri-line-chart-line"></i>
+              <h3>Trade &amp; track</h3>
+              <p>Place orders, monitor P&amp;L, and refine your strategy from any device.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform — split product showcase -->
+    <section class="platform-show" aria-labelledby="platform-title">
+      <div class="platform-show-layout">
+        <div class="platform-show-copy" data-aos="fade-up">
+          <p class="platform-show-kicker">Platform</p>
+          <h2 id="platform-title" class="platform-show-title">A trading desk in your browser</h2>
+          <p class="platform-show-lead">Watchlists, depth, charts, and orders — unified in one Stackly workspace built for the open.</p>
+
+          <ul class="platform-show-list">
+            <li>
+              <i class="ri-eye-line"></i>
+              <div>
+                <strong>One-screen clarity</strong>
+                <span>Depth, tape, and positions stay visible while you work an order.</span>
+              </div>
+            </li>
+            <li>
+              <i class="ri-flashlight-line"></i>
+              <div>
+                <strong>Built for the open</strong>
+                <span>Hotkeys and saved layouts so the first minutes feel calm.</span>
+              </div>
+            </li>
+            <li>
+              <i class="ri-smartphone-line"></i>
+              <div>
+                <strong>Desk to pocket</strong>
+                <span>Same book and watchlists on mobile — no relearning the UI.</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="platform-show-cta">
+            <a href="404.html" class="btn btn-primary">Preview workspace</a>
+            <a href="404.html" class="btn btn-secondary">Signup</a>
+          </div>
+        </div>
+
+        <div class="platform-show-visual" data-aos="fade-up" data-aos-delay="120">
+          <div class="platform-show-media">
+            <img src="images/photo-1590283603385-17ffb3a7f29f-w1600.webp" alt="Trader viewing live market charts on professional screens" width="1600" height="1200" loading="lazy">
+          </div>
+          <div class="platform-show-meta" aria-label="Platform highlights">
+            <div class="platform-show-stat">
+              <span>Capability</span>
+              <strong>Live depth</strong>
+            </div>
+            <div class="platform-show-stat">
+              <span>Orders</span>
+              <strong>Smart routing</strong>
+            </div>
+            <div class="platform-show-stat">
+              <span>Charts</span>
+              <strong>Multi-layout</strong>
+            </div>
+            <div class="platform-show-stat">
+              <span>Latency</span>
+              <strong>&lt;12ms</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients — autoslide voice board -->
+    <section class="clients-voice" aria-labelledby="clients-title">
+      <div class="clients-voice-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="clients-voice-layout" data-aos="fade-up">
+          <aside class="clients-voice-aside">
+            <p class="clients-voice-kicker">Clients</p>
+            <h2 id="clients-title" class="clients-voice-title">Trusted by investors who care about process</h2>
+            <p class="clients-voice-lead">Real voices from traders, families, and desks running Stackly every session.</p>
+
+            <div class="clients-voice-controls">
+              <button type="button" class="clients-nav clients-prev" aria-label="Previous client story">
+                <i class="ri-arrow-left-line"></i>
+              </button>
+              <button type="button" class="clients-nav clients-next" aria-label="Next client story">
+                <i class="ri-arrow-right-line"></i>
+              </button>
+            </div>
+
+            <div class="clients-progress" aria-hidden="true">
+              <span class="clients-progress-label">Auto</span>
+              <div class="clients-progress-track">
+                <span class="clients-progress-bar"></span>
+              </div>
+            </div>
+          </aside>
+
+          <div class="clients-voice-stage">
+            <div class="swiper clients-swiper">
+              <div class="swiper-wrapper">
+                <article class="swiper-slide clients-slide">
+                  <div class="clients-slide-inner">
+                    <div class="clients-slide-media">
+                      <img src="images/photo-1507003211169-0a1dd7228f2d-w700-h900.webp" alt="Portrait of Arjun Mehta" width="700" height="900" loading="lazy">
+                    </div>
+                    <div class="clients-slide-copy">
+                      <p class="clients-quote-mark" aria-hidden="true">“</p>
+                      <blockquote>Stackly replaced three tools for us. Execution is crisp, and the research notes actually help before the open.</blockquote>
+                      <div class="clients-person">
+                        <strong>Arjun Mehta</strong>
+                        <span>Active trader · Mumbai</span>
+                        <span class="clients-chip">Equities &amp; F&amp;O</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="swiper-slide clients-slide">
+                  <div class="clients-slide-inner">
+                    <div class="clients-slide-media">
+                      <img src="images/photo-1573496359142-b8d87734a5a2-w700-h900.webp" alt="Portrait of Priya Nair" width="700" height="900" loading="lazy">
+                    </div>
+                    <div class="clients-slide-copy">
+                      <p class="clients-quote-mark" aria-hidden="true">“</p>
+                      <blockquote>We moved our family’s SIPs and demat here. Reporting is clear, and support responds like a relationship desk.</blockquote>
+                      <div class="clients-person">
+                        <strong>Priya Nair</strong>
+                        <span>Long-term investor · Bengaluru</span>
+                        <span class="clients-chip">Wealth &amp; SIP</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="swiper-slide clients-slide">
+                  <div class="clients-slide-inner">
+                    <div class="clients-slide-media">
+                      <img src="images/photo-1472099645785-5658abf4ff4e-w700-h900.webp" alt="Portrait of Daniel Okonkwo" width="700" height="900" loading="lazy">
+                    </div>
+                    <div class="clients-slide-copy">
+                      <p class="clients-quote-mark" aria-hidden="true">“</p>
+                      <blockquote>API access for our small desk was seamless. Margin visibility alone paid for the Pro plan.</blockquote>
+                      <div class="clients-person">
+                        <strong>Daniel Okonkwo</strong>
+                        <span>Quant desk lead · London</span>
+                        <span class="clients-chip">Pro · API</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="swiper-slide clients-slide">
+                  <div class="clients-slide-inner">
+                    <div class="clients-slide-media">
+                      <img src="images/photo-1580489944761-15a19d654956-w700-h900.webp" alt="Portrait of Meera Iyer" width="700" height="900" loading="lazy">
+                    </div>
+                    <div class="clients-slide-copy">
+                      <p class="clients-quote-mark" aria-hidden="true">“</p>
+                      <blockquote>Onboarding was paperless and fast. I can track holdings and place SIPs without jumping between apps.</blockquote>
+                      <div class="clients-person">
+                        <strong>Meera Iyer</strong>
+                        <span>First-time investor · Chennai</span>
+                        <span class="clients-chip">Basic · MF</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="swiper-slide clients-slide">
+                  <div class="clients-slide-inner">
+                    <div class="clients-slide-media">
+                      <img src="images/photo-1519085360753-af0119f7cbe7-w700-h900.webp" alt="Portrait of Rohan Kapoor" width="700" height="900" loading="lazy">
+                    </div>
+                    <div class="clients-slide-copy">
+                      <p class="clients-quote-mark" aria-hidden="true">“</p>
+                      <blockquote>The watchlist and order ticket feel built for speed. Our RM on Elite actually knows our book.</blockquote>
+                      <div class="clients-person">
+                        <strong>Rohan Kapoor</strong>
+                        <span>HNWI desk · Delhi NCR</span>
+                        <span class="clients-chip">Elite</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="clients-pagination swiper-pagination" aria-label="Client stories pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insights — cinematic market brief -->
+    <section class="insights-brief" aria-labelledby="insights-title">
+      <div class="insights-brief-bg" aria-hidden="true"></div>
+      <div class="container">
+        <header class="insights-brief-head" data-aos="fade-up">
+          <div>
+            <p class="insights-brief-kicker">From the Stackly desk</p>
+            <h2 id="insights-title" class="insights-brief-title">Insights</h2>
+          </div>
+          <a href="404.html" class="insights-brief-link">View all <i class="ri-arrow-right-line"></i></a>
+        </header>
+
+        <article class="insights-hero" data-aos="fade-up">
+          <a href="404.html" class="insights-hero-visual">
+            <img src="images/photo-1559526324-4b87b5e36e44-w1800.webp" alt="Investor analyzing market performance on a laptop" width="1800" height="1000" loading="lazy">
+          </a>
+          <div class="insights-hero-panel">
+            <div class="insights-hero-meta">
+              <span class="insights-brief-tag">Markets</span>
+              <span>Oct 28, 2026</span>
+              <span>6 min read</span>
+            </div>
+            <h3><a href="404.html">How to read open interest before F&amp;O expiry</a></h3>
+            <p>A practical framework for spotting crowded positioning without drowning in noise.</p>
+            <a href="404.html" class="btn btn-primary insights-hero-cta">Read briefing <i class="ri-arrow-right-line"></i></a>
+          </div>
+        </article>
+
+        <div class="insights-duo">
+          <article class="insights-duo-item" data-aos="fade-up" data-aos-delay="80">
+            <a href="404.html" class="insights-duo-img">
+              <img src="images/photo-1554224155-6726b3ff858f-w900.webp" alt="Financial planning documents and calculator" width="900" height="600" loading="lazy">
+            </a>
+            <div class="insights-duo-copy">
+              <div class="insights-hero-meta">
+                <span class="insights-brief-tag">Education</span>
+                <span>Oct 21, 2026</span>
+              </div>
+              <h3><a href="404.html">SIP vs lump sum in volatile quarters</a></h3>
+              <p>When averaging in wins — and when staggered cash deployment is smarter.</p>
+              <a href="404.html" class="insights-duo-more">Continue reading <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </article>
+
+          <article class="insights-duo-item" data-aos="fade-up" data-aos-delay="160">
+            <a href="404.html" class="insights-duo-img">
+              <img src="images/photo-1460925895917-afdab827c52f-w900.webp" alt="Laptop analytics dashboard on a wooden desk" width="900" height="600" loading="lazy">
+            </a>
+            <div class="insights-duo-copy">
+              <div class="insights-hero-meta">
+                <span class="insights-brief-tag">Company</span>
+                <span>Oct 14, 2026</span>
+              </div>
+              <h3><a href="404.html">Stackly Pro: deeper depth &amp; faster charts</a></h3>
+              <p>What’s new in the Pro workspace for active traders this quarter.</p>
+              <a href="404.html" class="insights-duo-more">Continue reading <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="plans" id="plans" aria-labelledby="plans-title">
+      <div class="container">
+        <div class="plans-head" data-aos="fade-up">
+          <p class="plans-kicker">Pricing</p>
+          <h2 id="plans-title" class="plans-title">Three ways to trade</h2>
+          <p class="plans-lead">Flat brokerage on every plan. The platform fee is the only difference — published before you place an order.</p>
+        </div>
+        <div class="plans-grid">
+          <article class="plan" data-aos="fade-up" data-aos-delay="0">
+            <p class="plan-name">Basic</p>
+            <p class="plan-for">Start with a cash book</p>
+            <p class="plan-price"><span>₹0</span><small>/ month</small></p>
+            <ul class="plan-list">
+              <li><i class="ri-check-line"></i> ₹20 per equity, intraday, and F&amp;O order</li>
+              <li><i class="ri-check-line"></i> Web and mobile trading</li>
+              <li><i class="ri-check-line"></i> Mutual funds and IPO applications</li>
+              <li><i class="ri-check-line"></i> Watchlists and basic charts</li>
+              <li><i class="ri-check-line"></i> UPI, net banking, and NEFT funding</li>
+              <li><i class="ri-check-line"></i> No platform fee</li>
+            </ul>
+            <a href="404.html" class="btn btn-outline btn-block">Get Basic</a>
+          </article>
+          <article class="plan plan--pro" data-aos="fade-up" data-aos-delay="80">
+            <span class="plan-badge">Most chosen</span>
+            <p class="plan-name">Pro</p>
+            <p class="plan-for">Active traders and systematic desks</p>
+            <p class="plan-price"><span>₹499</span><small>/ month</small></p>
+            <ul class="plan-list">
+              <li><i class="ri-check-line"></i> ₹15 per order across segments</li>
+              <li><i class="ri-check-line"></i> Advanced charts and market depth</li>
+              <li><i class="ri-check-line"></i> API sandbox for strategy testing</li>
+              <li><i class="ri-check-line"></i> Research notes before the open</li>
+              <li><i class="ri-check-line"></i> Price alerts and custom screens</li>
+              <li><i class="ri-check-line"></i> Priority desk support</li>
+            </ul>
+            <a href="404.html" class="btn btn-primary btn-block">Get Pro</a>
+          </article>
+          <article class="plan" data-aos="fade-up" data-aos-delay="160">
+            <p class="plan-name">Elite</p>
+            <p class="plan-for">Larger books that need a person</p>
+            <p class="plan-price"><span>₹1,999</span><small>/ month</small></p>
+            <ul class="plan-list">
+              <li><i class="ri-check-line"></i> ₹10 per order across segments</li>
+              <li><i class="ri-check-line"></i> Advanced charts and market depth</li>
+              <li><i class="ri-check-line"></i> Full production API access</li>
+              <li><i class="ri-check-line"></i> Portfolio advisory reviews</li>
+              <li><i class="ri-check-line"></i> After-hours relationship desk</li>
+              <li><i class="ri-check-line"></i> Dedicated relationship manager</li>
+            </ul>
+            <a href="404.html" class="btn btn-outline btn-block">Get Elite</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ — clearing board -->
+    <section class="faq-board" aria-labelledby="faq-title">
+      <div class="faq-board-visual" data-aos="fade-up">
+        <img src="images/photo-1600880292089-90a7e086ee0c-w1400.webp" alt="Support specialists collaborating in a modern office" width="1400" height="1600" loading="lazy">
+        <div class="faq-board-visual-copy">
+          <p class="faq-board-kicker">Support</p>
+          <h2 id="faq-title" class="faq-board-title">FAQ</h2>
+          <p>Five answers traders ask before the open.</p>
+          <a href="404.html" class="btn btn-primary">Contact support</a>
+        </div>
+      </div>
+
+      <div class="faq-board-list" data-aos="fade-up" data-aos-delay="100">
+        <div class="faq-item is-open">
+          <button type="button" class="faq-trigger" aria-expanded="true">
+            <span class="faq-num">01</span>
+            <span class="faq-q">How long does account opening and KYC take?</span>
+            <i class="ri-add-line faq-icon" aria-hidden="true"></i>
+          </button>
+          <div class="faq-panel" role="region">
+            <p>Most clients finish paperless signup in minutes. Aadhaar eSign and bank verification typically clear the same business day; trading unlocks once KYC is approved.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span class="faq-num">02</span>
+            <span class="faq-q">What are Stackly’s brokerage charges?</span>
+            <i class="ri-add-line faq-icon" aria-hidden="true"></i>
+          </button>
+          <div class="faq-panel" role="region" hidden>
+            <p>Basic is ₹0 a month at ₹20 per order. Pro is ₹499 at ₹15 per order, with charts and an API sandbox. Elite is ₹1,999 at ₹10 per order, with production APIs and a relationship manager.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span class="faq-num">03</span>
+            <span class="faq-q">Is my money and data safe with Stackly?</span>
+            <i class="ri-add-line faq-icon" aria-hidden="true"></i>
+          </button>
+          <div class="faq-panel" role="region" hidden>
+            <p>Client funds are held in segregated accounts with daily reconciliation. Sessions use encryption and 2FA, with role-based access across operations aligned to regulated broking practices.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span class="faq-num">04</span>
+            <span class="faq-q">Can I trade equities, F&amp;O, and mutual funds in one account?</span>
+            <i class="ri-add-line faq-icon" aria-hidden="true"></i>
+          </button>
+          <div class="faq-panel" role="region" hidden>
+            <p>Yes. A single Stackly relationship covers cash equities, derivatives (subject to activation), mutual funds, IPOs, and advisory tools — without juggling multiple logins.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-trigger" aria-expanded="false">
+            <span class="faq-num">05</span>
+            <span class="faq-q">How do I fund my account?</span>
+            <i class="ri-add-line faq-icon" aria-hidden="true"></i>
+          </button>
+          <div class="faq-panel" role="region" hidden>
+            <p>Add funds via UPI, net banking, or NEFT/IMPS from your linked bank account. Most UPI deposits reflect in near real time so you can trade the same session.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-finale" aria-labelledby="cta-finale-title">
+      <div class="cta-finale-media" aria-hidden="true">
+        <img src="images/photo-1543286386-713bdd548da4-w2000.webp" alt="" width="2000" height="1100" loading="lazy">
+      </div>
+      <div class="cta-finale-veil" aria-hidden="true"></div>
+      <div class="cta-finale-grid" aria-hidden="true"></div>
+      <div class="cta-finale-glow" aria-hidden="true"></div>
+
+      <div class="container cta-finale-inner">
+        <div class="cta-finale-copy" data-aos="fade-up">
+          <p class="cta-finale-kicker">Markets open · Paperless KYC</p>
+          <h2 id="cta-finale-title" class="cta-finale-title">
+            <span class="cta-finale-line">Start trading</span>
+            <span class="cta-finale-brand">with STACK<span>LY</span></span>
+          </h2>
+          <p class="cta-finale-lead">One account. Equities, F&amp;O, and wealth — execution that respects your timing.</p>
+
+          <ol class="cta-finale-path" aria-label="Getting started">
+            <li><span class="cta-finale-step">01</span> Open</li>
+            <li aria-hidden="true" class="cta-finale-path-rule"></li>
+            <li><span class="cta-finale-step">02</span> Verify</li>
+            <li aria-hidden="true" class="cta-finale-path-rule"></li>
+            <li><span class="cta-finale-step">03</span> Trade</li>
+          </ol>
+        </div>
+
+        <div class="cta-finale-action" data-aos="fade-up" data-aos-delay="120">
+          <div class="cta-finale-action-panel">
+            <p class="cta-finale-action-label">Ready when you are</p>
+            <a href="404.html" class="btn btn-primary btn-block cta-finale-primary">Signup <i class="ri-arrow-right-line"></i></a>
+            <a href="404.html" class="btn btn-block cta-finale-ghost">Talk to an advisor</a>
+            <p class="cta-finale-fine">No account fees on Basic · SEBI-aligned onboarding</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="images/stackly-green.webp" alt="STACKLY" width="320" height="132"></a>
+        <p>Premium brokerage for equities, derivatives, and wealth. Trade smarter. Grow faster.</p>
+        <div class="social-links">
+          <a href="404.html" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+          <a href="404.html" aria-label="X"><i class="ri-twitter-x-fill"></i></a>
+          <a href="404.html" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+          <a href="404.html" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Markets</h4>
+        <ul>
+          <li><a href="404.html">Equities</a></li>
+          <li><a href="404.html">F&amp;O</a></li>
+          <li><a href="404.html">Mutual Funds</a></li>
+          <li><a href="404.html">IPO</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="404.html">Privacy Policy</a></li>
+          <li><a href="404.html">Terms of Use</a></li>
+          <li><a href="404.html">Risk Disclosure</a></li>
+          <li><a href="404.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <form class="newsletter-form" action="404.html" method="get">
+          <label class="sr-only" for="nl-email">Email</label>
+          <input type="email" id="nl-email" placeholder="Your email" required>
+          <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Stackly Broking Ltd. All rights reserved.</span>
+      <span>Investment in securities market are subject to market risks.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

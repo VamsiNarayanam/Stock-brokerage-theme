@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — STACKLY</title>
+  <meta name="description" content="STACKLY blog: market insights, investor education, and company updates.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%230B1F3A' width='32' height='32' rx='6'/><text x='16' y='22' text-anchor='middle' fill='%2300C853' font-size='16' font-family='sans-serif' font-weight='700'>S</text></svg>">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="is-preload">
+  <div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Loading Stackly">
+    <div class="preloader-glow" aria-hidden="true"></div>
+    <div class="preloader-inner">
+      <div class="preloader-mark" aria-hidden="true">
+        <span class="preloader-ring"></span>
+        <span class="preloader-ring preloader-ring--delay"></span>
+        <strong>S</strong>
+      </div>
+      <p class="preloader-brand">STACK<span>LY</span></p>
+      <p class="preloader-status">Opening your markets</p>
+      <div class="preloader-bar" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><img src="images/stackly-green.webp" alt="STACKLY" width="320" height="132"></a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><i class="ri-menu-line"></i></button>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div class="nav-mobile-actions">
+          <a href="login.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.35)">Login</a>
+          <a href="signup.html" class="btn btn-primary">Signup</a>
+        </div>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="btn-login">Login</a>
+        <a href="signup.html" class="btn btn-primary">Signup</a>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <main>
+    <section class="hero hero--center">
+      <div class="hero-bg">
+        <img src="images/photo-1504711434969-e33886168f5c-w2000.webp" alt="Newsroom desk with screens and notes before the open" width="2000" height="1200">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <p class="hero-brand" data-aos="fade-up">STACK<span>LY</span></p>
+        <span class="hero-rule" aria-hidden="true" data-aos="fade-up" data-aos-delay="80"></span>
+        <h1 class="hero-headline" data-aos="fade-up" data-aos-delay="120">Notes from the desk.</h1>
+        <p class="hero-support" data-aos="fade-up" data-aos-delay="180">Markets, education, and product updates — written for people who trade, and shipped before the open.</p>
+        <div class="cta-group" data-aos="fade-up" data-aos-delay="260">
+          <a href="404.html" class="btn btn-primary">Read insights</a>
+          <a href="404.html" class="btn btn-secondary">Morning note</a>
+        </div>
+      </div>
+      <a href="#desk" class="hero-scroll" aria-label="Scroll to insights">
+        <span>Scroll</span>
+        <i class="ri-arrow-down-line"></i>
+      </a>
+    </section>
+
+    <section class="desk" id="desk" aria-labelledby="desk-title">
+      <div class="container">
+        <div class="desk-head" data-aos="fade-up">
+          <p class="desk-kicker">Insights</p>
+          <h2 id="desk-title" class="desk-title">From the Stackly desk</h2>
+          <p class="desk-lead">A lead note, then the rest of the book. Filter by what you actually read.</p>
+        </div>
+
+        <article class="desk-feature" data-category="markets" data-aos="fade-up">
+          <a href="404.html" class="desk-feature-media">
+            <img src="images/photo-1535320903710-d993d3d77d29-w1400.webp" alt="Stock trading screen with a rising graph" width="1400" height="900">
+            <span class="desk-feature-flag">Lead note</span>
+          </a>
+          <div class="desk-feature-copy">
+            <div class="blog-meta"><span class="blog-tag">Markets</span><span>Oct 28, 2026</span><span>6 min</span></div>
+            <h3><a href="404.html">How to read open interest before F&amp;O expiry</a></h3>
+            <p>A practical framework for spotting crowded positioning without drowning in noise — what to ignore, and what actually changes the book into expiry.</p>
+            <a href="404.html" class="desk-more">Read the note <i class="ri-arrow-right-line"></i></a>
+          </div>
+        </article>
+
+        <div class="blog-filters" data-aos="fade-up" role="tablist" aria-label="Filter posts">
+          <button type="button" class="filter-btn active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="markets">Markets</button>
+          <button type="button" class="filter-btn" data-filter="education">Education</button>
+          <button type="button" class="filter-btn" data-filter="company">Company</button>
+        </div>
+
+        <div class="desk-list">
+          <article class="desk-row" data-category="education" data-aos="fade-up">
+            <a href="404.html" class="desk-row-media">
+              <img src="images/photo-1554224155-6726b3ff858f-w600.webp" alt="Calculator and financial planning documents" width="600" height="400" loading="lazy">
+            </a>
+            <div class="desk-row-copy">
+              <div class="blog-meta"><span class="blog-tag">Education</span><span>Oct 21, 2026</span></div>
+              <h3><a href="404.html">SIP vs lump sum in volatile quarters</a></h3>
+              <p>When averaging in wins — and when staggered cash deployment is smarter.</p>
+            </div>
+            <span class="desk-row-time">5 min</span>
+          </article>
+          <article class="desk-row" data-category="company" data-aos="fade-up">
+            <a href="404.html" class="desk-row-media">
+              <img src="images/photo-1460925895917-afdab827c52f-w600.webp" alt="Laptop with an analytics dashboard on a desk" width="600" height="400" loading="lazy">
+            </a>
+            <div class="desk-row-copy">
+              <div class="blog-meta"><span class="blog-tag">Company</span><span>Oct 14, 2026</span></div>
+              <h3><a href="404.html">Stackly Pro: deeper depth &amp; faster charts</a></h3>
+              <p>What’s new in the Pro workspace for active traders this quarter.</p>
+            </div>
+            <span class="desk-row-time">4 min</span>
+          </article>
+          <article class="desk-row" data-category="markets" data-aos="fade-up">
+            <a href="404.html" class="desk-row-media">
+              <img src="images/photo-1526304640581-d334cdbbf45e-w600.webp" alt="Global finance and currency concept" width="600" height="400" loading="lazy">
+            </a>
+            <div class="desk-row-copy">
+              <div class="blog-meta"><span class="blog-tag">Markets</span><span>Oct 7, 2026</span></div>
+              <h3><a href="404.html">Rupee drivers to watch into year-end</a></h3>
+              <p>Flows, differentials, and policy cues shaping INR volatility.</p>
+            </div>
+            <span class="desk-row-time">7 min</span>
+          </article>
+          <article class="desk-row" data-category="education" data-aos="fade-up">
+            <a href="404.html" class="desk-row-media">
+              <img src="images/photo-1432888498266-38ffec3eaf0a-w600.webp" alt="Person studying charts on multiple monitors" width="600" height="400" loading="lazy">
+            </a>
+            <div class="desk-row-copy">
+              <div class="blog-meta"><span class="blog-tag">Education</span><span>Sep 30, 2026</span></div>
+              <h3><a href="404.html">Position sizing without the spreadsheet headache</a></h3>
+              <p>Simple rules to keep risk per trade consistent across volatile names.</p>
+            </div>
+            <span class="desk-row-time">6 min</span>
+          </article>
+          <article class="desk-row" data-category="company" data-aos="fade-up">
+            <a href="404.html" class="desk-row-media">
+              <img src="images/photo-1556761175-5973dc0f32e7-w600.webp" alt="Team meeting in a modern office" width="600" height="400" loading="lazy">
+            </a>
+            <div class="desk-row-copy">
+              <div class="blog-meta"><span class="blog-tag">Company</span><span>Sep 22, 2026</span></div>
+              <h3><a href="404.html">Expanding our Bengaluru client experience hub</a></h3>
+              <p>New walk-in support hours and onboarding clinics for south India clients.</p>
+            </div>
+            <span class="desk-row-time">3 min</span>
+          </article>
+        </div>
+
+        <nav class="pagination" aria-label="Blog pagination" data-aos="fade-up">
+          <span class="active">1</span>
+          <a href="404.html">2</a>
+          <a href="404.html">3</a>
+          <a href="404.html" aria-label="Next"><i class="ri-arrow-right-s-line"></i></a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="edition" aria-labelledby="week-title">
+      <div class="container">
+        <div class="edition-head" data-aos="fade-up">
+          <p class="edition-kicker">The week</p>
+          <h2 id="week-title">What the desk publishes</h2>
+          <p>Three fixed slots. If a note misses its slot, it waits for the next one.</p>
+        </div>
+        <ol class="edition-sheet" data-aos="fade-up">
+          <li class="edition-top" aria-hidden="true">
+            <span>Day</span>
+            <span>Slot</span>
+            <span>Desk</span>
+            <span>File</span>
+          </li>
+          <li>
+            <time>Mon</time>
+            <span class="edition-slot">08:00</span>
+            <div>
+              <h3>Markets</h3>
+              <p>Open interest, flows, and the levels that matter into the session.</p>
+            </div>
+            <span class="edition-file">MKT</span>
+          </li>
+          <li class="is-live">
+            <time>Wed</time>
+            <span class="edition-slot">08:00</span>
+            <div>
+              <h3>Education</h3>
+              <p>Sizing, SIPs, and the mechanics behind a clean order.</p>
+            </div>
+            <span class="edition-file">EDU</span>
+          </li>
+          <li>
+            <time>Fri</time>
+            <span class="edition-slot">08:00</span>
+            <div>
+              <h3>Company</h3>
+              <p>Product changes, desks, and what shipped on Stackly this week.</p>
+            </div>
+            <span class="edition-file">CO</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="proof" aria-labelledby="rules-title">
+      <div class="proof-intro" data-aos="fade-up">
+        <p class="proof-kicker">Standard</p>
+        <h2 id="rules-title">How a note gets published</h2>
+        <p>Three proofs. A draft that fails one does not go out.</p>
+      </div>
+      <article class="proof-band">
+        <h3>Sourced</h3>
+        <p>Every figure carries a source line. If we cannot name it, we do not print it.</p>
+      </article>
+      <article class="proof-band proof-band--ink">
+        <h3>Before the open</h3>
+        <p>The morning note lands before 08:00 IST, not after the first move.</p>
+      </article>
+      <article class="proof-band">
+        <h3>No hot takes</h3>
+        <p>Process over prediction. We describe the setup, not a price target for applause.</p>
+      </article>
+    </section>
+
+    <section class="readers" aria-labelledby="readers-title">
+      <div class="container readers-layout">
+        <div class="readers-intro" data-aos="fade-up">
+          <p class="readers-kicker">Who it’s for</p>
+          <h2 id="readers-title">Three readers. One desk.</h2>
+          <p>The book is the same. The file you open first depends on how you trade.</p>
+        </div>
+        <ol class="readers-stack" data-aos="fade-up" data-aos-delay="80">
+          <li>
+            <span>01</span>
+            <div>
+              <h3>The session trader</h3>
+              <p>Open interest, flows, and expiry. Start in Markets.</p>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <h3>The allocator</h3>
+              <p>SIPs, sizing, and the long book. Start in Education.</p>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <h3>The account</h3>
+              <p>What shipped, and where the desk sits. Start in Company.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="margin-desk" aria-labelledby="margin-title">
+      <div class="container margin-layout">
+        <blockquote class="margin-quote" data-aos="fade-up">
+          <p id="margin-title">Write the setup. <span>Leave the trade.</span></p>
+          <footer>Stackly research desk</footer>
+        </blockquote>
+        <aside class="margin-col" data-aos="fade-up" data-aos-delay="80">
+          <p class="margin-kicker">In the margin</p>
+          <ol>
+            <li>
+              <span>01</span>
+              <p>Start with the lead note. The list under it is the rest of the book.</p>
+            </li>
+            <li>
+              <span>02</span>
+              <p>Markets, Education, and Company are the only three files we keep.</p>
+            </li>
+            <li>
+              <span>03</span>
+              <p>Read time sits on every row so you know the cost before you open it.</p>
+            </li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section class="letter" id="briefing" aria-labelledby="briefing-title">
+      <div class="letter-sheet" data-aos="fade-up">
+        <div class="letter-perf" aria-hidden="true"></div>
+        <header class="letter-mast">
+          <span>STACKLY DESK</span>
+          <span>Morning note</span>
+        </header>
+        <h2 id="briefing-title">In your inbox before the bell</h2>
+        <p class="letter-to">To the reader · Session days · 08:00 IST</p>
+        <p class="letter-subject"><strong>Subject</strong> Pre-open · OI into expiry</p>
+        <p class="letter-body">One email. The same note the desk uses — markets first, no product pitch in the lead. If the session is shut, you get nothing.</p>
+        <form class="letter-reply newsletter-form" action="404.html" method="get">
+          <label for="briefing-email">Reply with your email</label>
+          <div class="letter-row">
+            <input type="email" id="briefing-email" placeholder="Work email" required>
+            <button type="submit" class="btn btn-primary">Send me the note</button>
+          </div>
+          <p class="letter-fine">Unsubscribe in one click. We do not share the list.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="images/stackly-green.webp" alt="STACKLY" width="320" height="132"></a>
+        <p>Premium brokerage for equities, derivatives, and wealth. Trade smarter. Grow faster.</p>
+        <div class="social-links">
+          <a href="404.html" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+          <a href="404.html" aria-label="X"><i class="ri-twitter-x-fill"></i></a>
+          <a href="404.html" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+          <a href="404.html" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Markets</h4>
+        <ul>
+          <li><a href="404.html">Equities</a></li>
+          <li><a href="404.html">F&amp;O</a></li>
+          <li><a href="404.html">Mutual Funds</a></li>
+          <li><a href="404.html">IPO</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="404.html">Privacy Policy</a></li>
+          <li><a href="404.html">Terms of Use</a></li>
+          <li><a href="404.html">Risk Disclosure</a></li>
+          <li><a href="404.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <form class="newsletter-form" action="404.html" method="get">
+          <label class="sr-only" for="nl-email">Email</label>
+          <input type="email" id="nl-email" placeholder="Your email" required>
+          <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Stackly Broking Ltd. All rights reserved.</span>
+      <span>Investment in securities market are subject to market risks.</span>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

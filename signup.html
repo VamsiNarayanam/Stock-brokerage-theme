@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup — STACKLY</title>
+  <meta name="description" content="Open a STACKLY brokerage account. Paperless KYC and secure onboarding.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%230B1F3A' width='32' height='32' rx='6'/><text x='16' y='22' text-anchor='middle' fill='%2300C853' font-size='16' font-family='sans-serif' font-weight='700'>S</text></svg>">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="is-preload">
+  <div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Loading Stackly">
+    <div class="preloader-glow" aria-hidden="true"></div>
+    <div class="preloader-inner">
+      <div class="preloader-mark" aria-hidden="true">
+        <span class="preloader-ring"></span>
+        <span class="preloader-ring preloader-ring--delay"></span>
+        <strong>S</strong>
+      </div>
+      <p class="preloader-brand">STACK<span>LY</span></p>
+      <p class="preloader-status">Opening your markets</p>
+      <div class="preloader-bar" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
+  <div class="auth-page">
+    <aside class="auth-visual">
+      <img src="images/photo-1553729459-efe14ef6055d-w1400.webp" alt="Investor reviewing portfolio growth charts" width="1400" height="1800">
+      <div class="auth-visual-overlay">
+        <a href="index.html" class="logo"><img src="images/stackly-green.webp" alt="STACKLY" width="320" height="132"></a>
+        <h2>Open your Stackly account</h2>
+        <p>Paperless onboarding. Trade equities, F&amp;O, and mutual funds from one workspace.</p>
+      </div>
+    </aside>
+
+    <div class="auth-panel">
+      <div class="auth-panel-inner" data-aos="fade-up">
+        <h1>Join Stackly</h1>
+        <p class="auth-sub">Open your brokerage account in minutes. Complete KYC after signup to start live trading.</p>
+
+        <div class="form-success">Account created — taking you to login…</div>
+        <form data-validate data-auth="signup" novalidate>
+          <div class="auth-role" role="radiogroup" aria-label="Create account as">
+            <label class="auth-role-opt">
+              <input type="radio" name="role" value="client" checked>
+              <span>Client</span>
+            </label>
+            <label class="auth-role-opt">
+              <input type="radio" name="role" value="admin">
+              <span>Admin</span>
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="fullname">Full name</label>
+            <input type="text" id="fullname" name="fullname" required minlength="2" autocomplete="name" placeholder="Your full name">
+            <p class="form-error">Enter your full name.</p>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
+            <p class="form-error">Enter a valid email.</p>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="password-field">
+              <input type="password" id="password" name="password" required autocomplete="new-password" minlength="8" placeholder="Min. 8 characters">
+              <button type="button" class="password-toggle" data-password-toggle aria-label="Show password" aria-pressed="false">
+                <i class="ri-eye-line" aria-hidden="true"></i>
+              </button>
+            </div>
+            <p class="form-error">Password must be at least 8 characters.</p>
+          </div>
+          <div class="form-group">
+            <label for="confirm">Confirm password</label>
+            <div class="password-field">
+              <input type="password" id="confirm" name="confirm" required autocomplete="new-password" data-match="#password" placeholder="Re-enter password">
+              <button type="button" class="password-toggle" data-password-toggle aria-label="Show password" aria-pressed="false">
+                <i class="ri-eye-line" aria-hidden="true"></i>
+              </button>
+            </div>
+            <p class="form-error">Passwords must match.</p>
+          </div>
+
+          <p class="kyc-note"><i class="ri-information-line"></i> After signup you’ll complete Aadhaar eSign / KYC and link a bank account before live trading is enabled.</p>
+
+          <label class="form-check">
+            <input type="checkbox" name="risk" required>
+            <span>I acknowledge the <a href="404.html" class="text-green">risk disclosure</a> and that investments are subject to market risks.</span>
+            <p class="form-error">Please acknowledge the risk disclosure.</p>
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-block">Signup</button>
+        </form>
+
+        <p class="auth-footer-link">Already have an account? <a href="login.html">Sign in</a></p>
+        <a href="index.html" class="auth-back"><i class="ri-arrow-left-line"></i> Back to home</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
