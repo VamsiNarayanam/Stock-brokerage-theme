@@ -521,11 +521,11 @@
       const value = emailInput ? String(emailInput.value || '').trim() : '';
       const success = form.parentElement && form.parentElement.querySelector('.newsletter-success');
 
-      if (!value) {
+      if (!value || !emailInput || !emailInput.validity.valid) {
         if (success) success.hidden = true;
         const err = ensureStatus('newsletter-error');
         if (err) {
-          err.textContent = 'Fill email';
+          err.textContent = value ? 'Enter a valid email address' : 'Enter your email address';
           err.setAttribute('role', 'alert');
           err.hidden = false;
         }
